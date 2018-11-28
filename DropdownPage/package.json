@@ -1,0 +1,22 @@
+{
+  "name": "myLocalProj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "myapp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "file-api": "^0.10.4",
+    "fs": "0.0.1-security",
+    "mysql": "^2.16.0",
+    "nodemailer": "^4.7.0",
+    "path": "^0.12.7",
+    "shelljs": "^0.8.2"
+  }
+}
