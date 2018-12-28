@@ -12,7 +12,7 @@ button {
     color:white;
     font-weight:bold;
     border-radius:5px;
-    background:rgb(61, 64, 90);
+    background:rgb(61, 64, 90) !important;
     cursor:pointer;
     width:200px;
     height:70px;
@@ -21,8 +21,11 @@ button {
     outline:none;  
     border:none; 
 }
+button:focus {outline:0;}
+
 h1 {
     color:rgb(61, 64, 90);
+    
 }
 #progress {
     width:0px;
@@ -146,7 +149,7 @@ i {
 
 #nav a:hover {
     text-decoration:none;
-    border-bottom:1px solid lightblue;
+    border-bottom:1px solid rgb(210, 241, 241);
     transition: .2s ease-out;
 }
 
@@ -172,7 +175,8 @@ i {
 }
 .receipt {
     display:none;
-    padding:80px;
+    padding:150px;
+    margin-top:30px;
 }
 
 .receipt h1 {
@@ -186,11 +190,27 @@ label {
 
 select,input {
     border:none !important;
+    background:rgb(210, 241, 241) !important;
+    border-bottom: 2px solid white !important;
+    color: rgb(61, 64, 90) !important;
 }
 
+.form-control:focus {
+    outline:none !important;
+    box-shadow: none !important;
+}
+input:focus {
+    outline:none !important;
+    box-shadow: none !important; 
+}
 option {
     font-size:14px !important;
 }
+
+select{
+    width:100%;
+}
+
 .form-select label {
     margin:20px 0px;
 }
@@ -204,6 +224,20 @@ option {
     min-width:100%;
 }
 
+.receipt-header {
+    font-weight:bold;
+    font-size:1.2rem;
+    color: rgb(61, 64, 90) !important;
+}
+
+.receipt .row {
+    margin:40px 0px;
+}
+
+.receipt .input {
+    margin:3px 10px;
+    color: rgb(61, 64, 90) !important;
+}
 
 
 
@@ -586,13 +620,16 @@ option {
             </div>
         </div>
 
-        <form action="#" >
-            <div>
-                <label for="os">Enter Email for Custom PSet Link</label>
-                <input id="to" name="to" value="" required>
+        <div class="row">
+            <div class="col">
+                <form action="#" >
+                    <div>
+                        <label for="os">Enter Email for Custom PSet Link</label>
+                        <input id="to" name="to" value="" required>
+                    </div>
+                </form>
             </div>
-        </form>
-
+        </div>
         <div id="bar">
             <button id="btn" onclick="receiptFn()">
             <span id="text">SUBMIT</span>
@@ -604,32 +641,32 @@ option {
     <div id="container" class="receipt">
           <!-- <div  id="res" class="container"> -->
             <h1>You have selected:</h1>
-            <br><br><div class="row" >
-              <b><u>Dataset:</u></b> &nbsp; <span id="osr"></span>
+            <p><div class="row" >
+                <span class="receipt-header">Dataset:</span>&nbsp; <span id="osr" class="input"></span>
             </div>
-            <br><div class="row">
-                    <b><u>Dataset Version:</u></b> &nbsp; <span id="verr"></span>
+            <p><div class="row">
+                <span class="receipt-header">Dataset Version:</span> &nbsp; <span id="verr" class="input"></span>
             </div>
-            <br><div class="row">
-                    <b><u>Genome:</u></b> &nbsp; <span id="genomer"></span>
+            <p><div class="row">
+                <span class="receipt-header">Genome:</span> &nbsp; <span id="genomer" class="input"></span>
             </div>
-            <br><div class="row">
-                    <b><u>Drug Sensitivity:</u></b> &nbsp; <span id="corr"></span>
-            </div>
-
-            <br><div class="row">
-                    <b><u>Data Type 2:</u></b> &nbsp; <span id="phr2"></span>
-            </div>
-            <br><div class="row">
-                    <b><u>Tool + version:</u></b> &nbsp; <span id="bvr"></span>
-
-            </div>
-            <br><div class="row">
-                    <b><u>RNA Tool Reference:</u></b> &nbsp; <span id="g2r"></span>
+            <p><div class="row">
+                <span class="receipt-header">Drug Sensitivity:</span> &nbsp; <span id="corr" class="input"></span>
             </div>
 
-            <br><div class="row">
-                    <b><u>Email:</u></b> &nbsp; <span id="email"></span>
+            <p><div class="row">
+                <span class="receipt-header">Data Type 2:</span> &nbsp; <span id="phr2" class="input"></span>
+            </div>
+            <p><div class="row">
+                <span class="receipt-header">Tool + Version:</span> &nbsp; <span id="bvr" class="input"></span>
+
+            </div>
+            <p><div class="row">
+                <span class="receipt-header">RNA Tool Reference:</span> &nbsp; <span id="g2r" class="input"></span>
+            </div>
+
+            <p><div class="row">
+                <span class="receipt-header">Email:</span> &nbsp; <span id="email" class="input"></span>
             </div>
         <!-- </div> -->
 
