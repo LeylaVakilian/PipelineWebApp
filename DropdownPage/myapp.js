@@ -4,6 +4,7 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var app = express();
 
+
 // support json encoded bodies
 app.use(bodyParser.json());
 // support encoded bodies
@@ -19,6 +20,9 @@ app.set('view engine', 'html');
 var index = require('./routes/index'); 
 app.use('/', index);
 
+// set public path
+var publicDir = require('path').join(__dirname,'/public');
+app.use(express.static(publicDir));
 
 app.listen(3000, function () {
     console.log('Go to http://localhost:3000 or http://127.0.0.1:300 to view');
