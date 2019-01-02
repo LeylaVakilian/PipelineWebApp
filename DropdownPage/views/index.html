@@ -21,6 +21,7 @@ button {
     outline:none;  
     border:none; 
 }
+
 h1 {
     color:rgb(61, 64, 90);
 }
@@ -173,7 +174,9 @@ i {
 .receipt {
     display:none;
     padding:80px;
+    font-size:20px;
 }
+
 
 .receipt h1 {
     margin-left:-20px;
@@ -204,6 +207,20 @@ option {
     min-width:100%;
 }
 
+.btn-primary {
+    color:white;
+    font-weight:bold;
+    border-radius:5px;
+    background:rgb(61, 64, 90);
+    cursor:pointer;
+    padding:0;
+    position:relative;
+    margin:20px 0px;
+}
+
+#add2:hover, #sub2:hover {
+    background-color:rgb(243, 166, 77) !important;
+}
 
 
 
@@ -271,9 +288,9 @@ option {
      
 
 
-        bv2.style.visibility = "hidden";
-        sub2.style.visibility = "hidden";
-        add2.style.visibility = "hidden";
+        bv2.style.display = "none";
+        sub2.style.display = "none";
+        add2.style.display = "none";
 
 
 
@@ -307,7 +324,7 @@ option {
 
 
         bv.addEventListener("change", function(){
-            document.getElementById('add2').style.visibility = "visible";
+            document.getElementById('add2').style.display = "block";
         });
 
 
@@ -316,9 +333,9 @@ option {
             var sel = ph2.options[ph2.selectedIndex].value;
             bv.options.length = 0;
             bv2.options.length = 0;
-            add2.style.visibility = 'hidden';
-            bv2.style.visibility = 'hidden';
-            sub2.style.visibility = 'hidden';
+            add2.style.display = 'none';
+            bv2.style.display = 'none';
+            sub2.style.display = 'none';
 
             if (sel == 'RNA'){
                 addOption(bv,'Select One...');
@@ -338,8 +355,8 @@ option {
             bv2.options.length = 0;
             var sel = ph2.options[ph2.selectedIndex].value;
             var sel2 = bv.options[bv.selectedIndex].value;
-            document.getElementById('bv2').style.visibility = "visible";
-            document.getElementById('sub2').style.visibility = "visible";
+            document.getElementById('bv2').style.display = "block";
+            document.getElementById('sub2').style.display = "block";
 
             if (sel == 'RNA'){
                 if(sel2 != 'Kallisto: 0.44.0') { 
@@ -394,8 +411,8 @@ option {
             var sel3 = ph2.options[ph2.selectedIndex].value;
 
             bv2.options.length = 0;
-            bv2.style.visibility = 'hidden';
-            sub2.style.visibility = 'hidden';
+            bv2.style.display = 'none';
+            sub2.style.display = 'none';
             
             bv.options.length = 0;
            if (sel3 == 'RNA'){
@@ -605,31 +622,31 @@ option {
           <!-- <div  id="res" class="container"> -->
             <h1>You have selected:</h1>
             <br><br><div class="row" >
-              <b><u>Dataset:</u></b> &nbsp; <span id="osr"></span>
+              <b>Dataset:</b> &nbsp; <span id="osr"></span>
             </div>
             <br><div class="row">
-                    <b><u>Dataset Version:</u></b> &nbsp; <span id="verr"></span>
+                    <b>Dataset Version:</b> &nbsp; <span id="verr"></span>
             </div>
             <br><div class="row">
-                    <b><u>Genome:</u></b> &nbsp; <span id="genomer"></span>
+                    <b>Genome:</b> &nbsp; <span id="genomer"></span>
             </div>
             <br><div class="row">
-                    <b><u>Drug Sensitivity:</u></b> &nbsp; <span id="corr"></span>
-            </div>
-
-            <br><div class="row">
-                    <b><u>Data Type 2:</u></b> &nbsp; <span id="phr2"></span>
-            </div>
-            <br><div class="row">
-                    <b><u>Tool + version:</u></b> &nbsp; <span id="bvr"></span>
-
-            </div>
-            <br><div class="row">
-                    <b><u>RNA Tool Reference:</u></b> &nbsp; <span id="g2r"></span>
+                    <b>Drug Sensitivity:</b> &nbsp; <span id="corr"></span>
             </div>
 
             <br><div class="row">
-                    <b><u>Email:</u></b> &nbsp; <span id="email"></span>
+                    <b>Data Type 2:</b> &nbsp; <span id="phr2"></span>
+            </div>
+            <br><div class="row">
+                    <b>Tool + version:</b> &nbsp; <span id="bvr"></span>
+
+            </div>
+            <br><div class="row">
+                    <b>RNA Tool Reference:</b> &nbsp; <span id="g2r"></span>
+            </div>
+
+            <br><div class="row">
+                    <b>Email:</b> &nbsp; <span id="email"></span>
             </div>
         <!-- </div> -->
 
