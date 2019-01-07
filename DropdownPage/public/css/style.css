@@ -70,7 +70,7 @@ span {
 .home h2 {
     left: 0;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 20px;
     position: absolute;
     top: 50%;
     width: 100%;
@@ -80,6 +80,35 @@ span {
     font-weight:bold;
     color:rgb(61, 64, 90);
 }
+
+#links {
+    margin: 100px auto;
+    width: 100%;
+    position:relative;
+    top:50%;
+    text-align:center;
+    background:rgb(190, 228, 228);
+    height:140px;
+    padding-top:57px;
+
+}
+
+#links a{
+    color:rgb(61, 64, 90);
+    font-size:14px;
+    font-weight:bold;
+    transition: .2s ease-out;
+    margin: 0px 8vw;
+    padding:15px 30px;
+    /* background:rgb(210, 241, 241); */
+    color:rgb(61, 64, 90);
+    text-align:center;
+}
+
+#links a:hover {
+    text-decoration:none;
+}
+
 i {
     border: solid rgb(241, 144, 33);
     border-width: 0 3px 3px 0;
@@ -117,23 +146,23 @@ i {
     color:rgb(16, 22, 77);
     z-index:999;
     border-bottom:10px solid rgb(210, 241, 241);
+    padding:0px 50px;
 }
 
 #nav img {
     width:45px;
     height:45px;
     float:left;
-    margin-top:3px;
-    margin-left:50px;
+    margin-top:5px;
 }
 
+
+
 #nav a {
-    position:absolute;
-    /* display:inline-block; */
+    float:right;
     color:rgb(61, 64, 90);
     font-size:14px;
-    margin-top:13px;
-    right:50px;
+    margin:13px 20px;
     border-bottom:1px solid rgb(61, 64, 90);
     padding-bottom:3px;
     font-weight:bold;
@@ -142,7 +171,7 @@ i {
 
 #nav a:hover {
     text-decoration:none;
-    border-bottom:1px solid rgb(210, 241, 241);
+    border-bottom:1px solid rgb(241, 144, 33);
     transition: .2s ease-out;
 }
 
